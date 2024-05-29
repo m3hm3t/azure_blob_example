@@ -51,7 +51,7 @@ func main() {
 
 	// Download the blob to the local file
 	ctx := context.Background()
-	_, err = blobClient.Download()
+	_, err = blobClient.Download(ctx, nil)
 	if err != nil {
 		fmt.Printf("failed to download blob: %v\n", err)
 		return
